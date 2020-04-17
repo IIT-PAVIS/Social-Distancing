@@ -23,7 +23,7 @@ To run this code, you need to install:
 ## Usage
 
 ```
-$ python social-distancing.py --image_in <path to the input image> --image_out <path to the result image> --horizontal_ratio 0.7 --vertical_ratio 0.7
+$ python social-distancing.py --image_in <path to the input image> --image_out <path to the result image to be saved> --horizontal_ratio 0.7 --vertical_ratio 0.7
 ```
 
 ## Dataset
