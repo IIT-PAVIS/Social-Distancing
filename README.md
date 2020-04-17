@@ -13,7 +13,7 @@ Code is developed in Python3 and tested on Ubuntu 18.04 with NVidia driver, Cuda
 To run this code, you need to install:
 
     * **OpenPose**:    
-    Please follow the instruction in the repository [gitHub](https://github.com/CMU-Perceptual-Computing-Lab/openpose) and install OpenPose in `ai_thermometer/openpose/` folder.   
+    Please follow the instruction in the repository [gitHub](https://github.com/CMU-Perceptual-Computing-Lab/openpose) and install OpenPose in `social-distancing/openpose/` folder.   
     In case you prefer to use a different OpenPose installation folder, you can pass it using the `--openpose_folder` argument. 
      
     * **OpenCV**:    
