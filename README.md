@@ -1,5 +1,5 @@
 # Social-Distancing
-Social-Distancing is an open-source project for automatically estimating interpersonal distance from uncalibrated RGB cameras. The software can be freely used for any non-commercial applications to assess compliance with safe distances. The code is open and can be improved with your support, please contact us at socialdistancing@iit.it if you will to help us.
+Social-Distancing is an open-source project for automatically estimating interpersonal distance from uncalibrated RGB cameras. The software can be freely used for any non-commercial applications to assess compliance with safe distances. The code is open and can be improved with your support, please contact us at socialdistancing@iit.it if you would like to help us.
 
 <img src="./social-distancing.gif" alt="output"/>
 
