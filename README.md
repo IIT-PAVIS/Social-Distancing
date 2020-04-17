@@ -40,8 +40,7 @@ We tested Social-Distancing code on the public ShanghaiTech'dataset.
 ```
 
 ## Disclaimer
-The information and content provided by this application is for information purposes only. 
-You hereby agree that you shall not make any health or medical related decision based in whole or in part on anything contained within the application without consulting your personal doctor.
+Information provided by the software is to be intended as an indication of safe distance compliance. It is not intended to measure the actual metric distance among people.
 
 The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors, PAVIS or IIT be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
 
