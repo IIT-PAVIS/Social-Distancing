@@ -31,7 +31,9 @@ To run this code, you need to install:
 ```
 $ python social-distancing.py --image_in <path to the input image> --image_out <path to the result image to be saved> --horizontal_ratio 0.7 --vertical_ratio 0.7
 ```
-
+```
+python3 social-distancing.py --stream_in [path to the input sequence] --stream_out [path to the result sequence] --horizontal_ratio 0.7 --vertical_ratio 0.7
+```
 ## Dataset
 We tested Social-Distancing code on the public ShanghaiTech'dataset. 
 
