@@ -240,7 +240,7 @@ class SocialDistancing:
         self.stream_list = []
 
         if self.streaming:
-            # Initialize thermal server
+            # Initialize video server
             self.video_server = StreamServer(
                 int(args[0].video_port), self.stream_list, "image/jpeg")
             self.video_server.activate()
@@ -570,7 +570,7 @@ class SocialDistancing:
     def send_image(self, queue_list, image, ts):
 
         encoded_image = self.jpeg.encode(image, quality=80)
-        # Put thermal image into queue for each server thread
+        # Put image into queue for each server thread
         for q in queue_list:
             try:
                 block = (ts, encoded_image)
