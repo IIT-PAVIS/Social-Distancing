@@ -27,13 +27,22 @@ To run this code, you need to install:
         `pip3 install opencv-python`
 
 ## Usage
+```
+python3 social-distancing.py -h  #help
+```
+####  Images
+```
+python3 social-distancing.py --image_in <path to the input image> --image_out <path to the result image to be saved> --horizontal_ratio 0.7 --vertical_ratio 0.7
+```
+####  Videos
+```
+python3 social-distancing.py --stream_in [path to the input video] --stream_out [path to the result video] --horizontal_ratio 0.7 --vertical_ratio 0.7
+```
+#### Network stream
+```
+python3 social-distancing.py --preview disabled --streaming enabled --video_port [port] --js_port [js_port] --stream_in [ address ]
+```
 
-```
-$ python social-distancing.py --image_in <path to the input image> --image_out <path to the result image to be saved> --horizontal_ratio 0.7 --vertical_ratio 0.7
-```
-```
-python3 social-distancing.py --stream_in [path to the input sequence] --stream_out [path to the result sequence] --horizontal_ratio 0.7 --vertical_ratio 0.7
-```
 ## Dataset
 We tested Social-Distancing code on the public ShanghaiTech'dataset. 
 
