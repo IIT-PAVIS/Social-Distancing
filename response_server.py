@@ -24,7 +24,7 @@
 
     The software can be freely used for any non-commercial applications and it is useful
     for the automatic early-screening of fever symptoms. The code is open and can be 
-    improved with your support, please contact us at aithermometer@iit.it if you want to help us.
+    improved with your support, please contact us at socialdistancing@iit.it if you want to help us.
 """
 
 import os
