@@ -377,9 +377,6 @@ class SocialDistancing:
         calculated_height = 0
         pointer = -1
 
-        # Left side body joints from top to down
-        #joint_set = [0, 1, 8, 12, 13, 14]
-
         # Left leg
         joint_set = [12, 13, 14]
 
@@ -401,8 +398,9 @@ class SocialDistancing:
                 x = int(skeletal_coordinate[k*2])
                 y = int(skeletal_coordinate[k*2+1])
                 if x == 0 or y == 0:
-                    # No left leg, no right leg, unable to evaluate ellipse
-                    return 0
+                    # No left leg, no right leg, then body
+                    joint_set = [0, 1, 8]
+                    break
 
         # Evaluate leg height
         pointer = -1
