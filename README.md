@@ -5,7 +5,7 @@ Social-Distancing is an open-source project for automatically estimating interpe
 
 ## What's New
 #### [April 24th, 2020]
-+ Code for live camera aquisition and video processing.
++ Code for live camera acquisition and video processing.
 + New video samples in the [samples](samples)  folder.
 
 
