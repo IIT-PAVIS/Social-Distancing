@@ -36,7 +36,7 @@ python3 social-distancing.py --image_in <path to the input image> --image_out <p
 ```
 ####  Videos
 ```
-python3 social-distancing.py --stream_in [path to the input video] --stream_out [path to the result video] --horizontal_ratio 0.7 --vertical_ratio 0.7
+python3 social-distancing.py --video enabled --stream_in [path to the input video] --stream_out [path to the result video] --horizontal_ratio 0.7 --vertical_ratio 0.7
 ```
 #### Network stream
 ```
