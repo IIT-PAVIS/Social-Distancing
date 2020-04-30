@@ -660,7 +660,7 @@ parser.add_argument("--image", default="disabled",
 parser.add_argument("--masked", default="disabled",
                     help="mask to blur visual appearance of people")
 
-parser.add_argument("--image_in", default="./imput image.jpg",
+parser.add_argument("--image_in", default="./input_image.jpg",
                     help="Process an image. Read all standard image formats")
 
 parser.add_argument("--image_out", default="./output_image.jpg",
