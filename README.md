@@ -14,7 +14,7 @@ Given a frame captured from a scene, the algorithm first detects visible people 
  
  If you use this code as part of your research, please cite [our work](https://arxiv.org/abs/2005.04813).
  ```
- @misc{cristani2020visual,
+ @misc{vsd2020,
     title={The Visual Social Distancing Problem},
     author={Marco Cristani and Alessio Del Bue and Vittorio Murino and Francesco Setti and Alessandro Vinciarelli},
     year={2020},
