@@ -36,6 +36,9 @@ To run this code, you need to install:
     * **OpenCV**:    
         `apt-get install python3-opencv`  
         `pip3 install opencv-python`
+        
+    * **PyTurboJPEG**:    
+        `pip3 install PyTurboJPEG `  
 
 ## Usage
 ```
