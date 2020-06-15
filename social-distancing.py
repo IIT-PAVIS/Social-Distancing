@@ -651,10 +651,10 @@ class SocialDistancing:
 # Argument parser
 parser = argparse.ArgumentParser()
 
-parser.add_argument("--video", default="enabled",
+parser.add_argument("--video", default="disabled",
                     help="select video mode, if defined")
 
-parser.add_argument("--image", default="disabled",
+parser.add_argument("--image", default="enabled",
                     help="select image mode, if defined")
 
 parser.add_argument("--masked", default="disabled",
