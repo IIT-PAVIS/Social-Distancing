@@ -4,6 +4,15 @@ Social-Distancing is an open-source project for automatically estimating interpe
 <img src="./social-distancing.gif" alt="output"/>
 
 ## What's New
+#### [November 4th, 2020]
++ Several alghorithm updates with better distance evaluation and computational speed up
++ Fast ellipses intersections check with Shapely
++ Added masking support to select interesting areas
++ Streaming support
++ Acquisition from Jetson nano camera
++ Ubuntu 20.04 with Cuda 10.1 support
+
+  
 #### [April 24th, 2020]
 + Code for live camera acquisition and video processing.
 + New video samples in the [samples](samples)  folder.
@@ -24,12 +33,12 @@ Given a frame captured from a scene, the algorithm first detects visible people 
  ```
  
 ## Installation steps
-Code is developed in Python3 and tested on Ubuntu 18.04 with NVidia driver, Cuda 10.0 and Cudnn 7.6.5. 
+Code is developed in Python3 and tested on Ubuntu 20.04 with NVidia driver, Cuda 10.1 and Cudnn 7.6.5. 
 
 * [x] **Install the requirements**  
 To run this code, you need to install:
 
-    * **OpenPose**:    
+    * **OpenPose 1.6.0**:    
     Please follow the instruction in the repository [gitHub](https://github.com/CMU-Perceptual-Computing-Lab/openpose) and install OpenPose in `social-distancing/openpose/` folder.   
     In case you prefer to use a different OpenPose installation folder, you can pass it using the `--openpose_folder` argument. 
      
@@ -40,21 +49,30 @@ To run this code, you need to install:
     * **PyTurboJPEG**:    
         `pip3 install PyTurboJPEG `  
 
+    * **Shapely**:
+        `pip3 install Shapely`
+
+    * **Itertools**:
+        `pip3 install itertools`
+
+    * **Numpy**:
+        `pip3 install numpy`
+
 ## Usage
 ```
-python3 social-distancing.py -h  #help
+python3 process_source.py -h  #help
 ```
 ####  Images
 ```
-python3 social-distancing.py --image_in <path to the input image> --image_out <path to the result image to be saved> --horizontal_ratio 0.7 --vertical_ratio 0.7
+python3 process_source.py --image_in <path to the input image> --image_out <path to the result image to be saved> -- background_in <path to the background> --horizontal_ratio 0.7 --vertical_ratio 0.7
 ```
 ####  Videos
 ```
-python3 social-distancing.py --video enabled --stream_in [path to the input video] --stream_out [path to the result video] --horizontal_ratio 0.7 --vertical_ratio 0.7
+python3 process_source.py --video enabled --stream_in [path to the input video] --stream_out [path to the result video] --horizontal_ratio 0.7 --vertical_ratio 0.7
 ```
 #### Network stream
 ```
-python3 social-distancing.py --preview disabled --streaming enabled --video_port [port] --js_port [js_port] --stream_in [ address ]
+python3 process_source.py --preview disabled --streaming enabled --video_port [port] --js_port [js_port] --stream_in [ address ]
 ```
 
 ## Dataset

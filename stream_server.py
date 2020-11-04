@@ -1,33 +1,24 @@
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
+"""
+    Social-Distancing
 
-""" 
-    Social-Distancing: Streaming http multipart jpeg/json server 
-   
     IIT : Istituto italiano di tecnologia
+
     Pattern Analysis and Computer Vision (PAVIS) research line
 
-    Disclaimer:
-    The information and content provided by this application is for information purposes only. 
-    You hereby agree that you shall not make any health or medical related decision based in whole 
-    or in part on anything contained within the application without consulting your personal doctor.
+    Description: Social distancing video stream server
 
-    The software is provided "as is", without warranty of any kind, express or implied, 
-    including but not limited to the warranties of merchantability, 
-    fitness for a particular purpose and noninfringement. In no event shall the authors, 
-    PAVIS or IIT be liable for any claim, damages or other liability, whether in an action of contract, 
-    tort or otherwise, arising from, out of or in connection with the software 
+    Disclaimer:
+    The information and content provided by this application is for information purposes only.
+    You hereby agree that you shall not make any health or medical related decision based in whole
+    or in part on anything contained within the application without consulting your personal doctor.
+    The software is provided "as is", without warranty of any kind, express or implied,
+    including but not limited to the warranties of merchantability,
+    fitness for a particular purpose and noninfringement. In no event shall the authors,
+    PAVIS or IIT be liable for any claim, damages or other liability, whether in an action of contract,
+    tort or otherwise, arising from, out of or in connection with the software
     or the use or other dealings in the software.
 
     LICENSE:
-    This project is licensed under the terms of the MIT license.
-    This project incorporates material from the projects listed below (collectively, "Third Party Code").  
-    This Third Party Code is licensed to you under their original license terms.  
-    We reserves all other rights not expressly granted, whether by implication, estoppel or otherwise.
-
-    The software can be freely used for any non-commercial applications and it is useful
-    for the automatic early-screening of fever symptoms. The code is open and can be 
-    improved with your support, please contact us at socialdistancing@iit.it if you want to help us.
 """
 
 import os
@@ -44,39 +35,41 @@ import json
 import threading
 import glob
 
-'''
-    StreamServer class, send images/json to remote clients
-'''
 class StreamServer:
-    '''
-        Initialize Video server with port and queue_list
-    '''
-    def __init__(self, port, queue_list, mt):
+    """StreamServer class, send images/json to remote clients
+    """
+
+
+    def __init__(self, port, queue_list, content_type):
+        """Initialize server
+
+        Args:
+            port (string): listen port
+            queue_list (queue): data queue
+            content_type (string): content type
+        """        
         self.port = port
         self.queue_list = queue_list
         self.run = True
-        self.mt = mt
+        self.content_type = content_type
 
-    '''
-        Activate litening
-    '''
     def activate(self):
+        """Activate listening
+        """
         self.run = True
          # Start listen thread
         threading.Thread(target=self.listen).start()
 
-    '''
-        Stop listening
-    '''
     def disconnect(self):
+        """Deactivate listening and close socket
+        """
         self.s.shutdown(socket.SHUT_RDWR)
         self.s.close()
         self.run = False
 
-    '''
-        Listen thermal from network
-    '''
     def listen(self):
+        """Listen new clients
+        """
         # Create server socket
         port = self.port
           
@@ -108,11 +101,13 @@ class StreamServer:
 
         print("Server on {0} listen stop".format(self.port), flush=True)
 
-    '''
-        Send images over network
-    '''
     def client_handler(self, c, q):
-    
+        """Client handler, send stream to remote client
+
+        Args:
+            c (socket): socket
+            q (queue): queue
+        """
         # Read request from remote web client
         data = c.recv(1024)
 
@@ -147,7 +142,7 @@ class StreamServer:
             # Create image header to client response
             response = "--myboundary\r\n" \
                         "X-TimeStamp: " + str(block[0]) + "\r\n" \
-                        "Content-Type: " + self.mt + "\r\n" \
+                        "Content-Type: " + self.content_type + "\r\n" \
                         "Content-Length: " + str(len(block[1])) + "\r\n\r\n"
                        
 
