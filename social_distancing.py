@@ -5,15 +5,17 @@
 
     Pattern Analysis and Computer Vision (PAVIS) research line
 
-    Description: The information and content provided by this application is for information purposes only. 
-	You hereby agree that you shall not make any health or medical related decision based in whole 
-	or in part on anything contained within the application without consulting your personal doctor.
-	The software is provided "as is", without warranty of any kind, express or implied, 
-	including but not limited to the warranties of merchantability, 
-	fitness for a particular purpose and noninfringement. In no event shall the authors, 
-	PAVIS or IIT be liable for any claim, damages or other liability, whether in an action of contract, 
-	tort or otherwise, arising from, out of or in connection with the software 
-	or the use or other dealings in the software.
+    Description: Social-Distancing is an open-source project for automatically estimating interpersonal distance from uncalibrated RGB
+	cameras. The software can be freely used for any non-commercial applications to assess compliance with safe distances. Given a frame
+	captured from a scene, the algorithm first detects visible people in the scene using an off-the-shelf body pose detector and 
+	estimates the height of the people through measuring the distance from their body joints. In the second step, the algorithm estimates
+	an area of one meter around all the detected people. This distance is roughly estimated proportional to a typical human body height
+	of 160 cm and can be used to draw a circle centered in human position in the scene. In the third step, the Homography of the scene
+	is estimated given two parameters which essentially map the rectangular bird’s view model for the scene to the trapezoidal perspective
+	view of the scene. These two parameters need to be manually tuned to estimate best the scene perspective. According to the Homography
+	matrix, the safe circular distance for each person is converted to ellipsoids in perspective view. The people are considered to be
+	staying in safe distance from each other if their ellipsoids do not collide. Conversely, if ellipsoids of two people collide, those
+	people are considered as being in risk and their ellipsoids will be shown in red.
 
     Disclaimer:
     The information and content provided by this application is for information purposes only.
