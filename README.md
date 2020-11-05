@@ -4,8 +4,10 @@ Social-Distancing is an open-source project for automatically estimating interpe
 <img src="./social-distancing.gif" alt="output"/>
 
 ## What's New
+#### [November 5th, 2020]
++ Our work have been accepted at **WACV 2021**. Chek out the [paper](http://arxiv.org/abs/2011.02018)!
 #### [November 4th, 2020]
-+ Several alghorithm updates with better distance evaluation and computational speed up
++ Alghorithm updates with better distance evaluation and computational speed up
 + Fast ellipses intersections check with Shapely
 + Added masking support to select interesting areas
 + Streaming support
@@ -21,14 +23,13 @@ Social-Distancing is an open-source project for automatically estimating interpe
 ## Description
 Given a frame captured from a scene, the algorithm first detects visible people in the scene using an off-the-shelf body pose detector and estimates the height of the people through measuring the distance from their body joints. In the second step, the algorithm estimates an area of one meter around all the detected people. This distance is roughly estimated proportional to a typical human body height of 160 cm and can be used to draw a circle centered in human position in the scene. In the third step, the Homography of the scene is estimated given two parameters which essentially map the rectangular bird’s view model for the scene to the trapezoidal perspective view of the scene. These two parameters need to be manually tuned to estimate best the scene perspective. According to the Homography matrix, the safe circular distance for each person is converted to ellipsoids in perspective view. The people are considered to be staying in safe distance from each other if their ellipsoids do not collide. Conversely, if ellipsoids of two people collide, those people are considered as being in risk and their ellipsoids will be shown in red.
  
- If you use this code as part of your research, please cite [our work](https://arxiv.org/abs/2005.04813).
+ If you use this code as part of your research, please cite [our work](http://arxiv.org/abs/2011.02018).
  ```
- @misc{vsd2020,
-    title={The Visual Social Distancing Problem},
-    author={Marco Cristani and Alessio Del Bue and Vittorio Murino and Francesco Setti and Alessandro Vinciarelli},
-    year={2020},
-    eprint={2005.04813},
-    archivePrefix={arXiv}
+ @inproceedings{vsd2021,
+    title={Single Image Human Proxemics Estimation for Visual Social Distancing},
+    author={Aghaei, Maya and Bustreo, Matteo and Wang, Yiming and  Bailo, Gian Luca and Morerio, Pietro and Del Bue, Alessio},
+    booktitle={IEEE Winter Conference on Applications of Computer Vision (WACV)},
+    year={2021}
 }
  ```
  
@@ -57,7 +58,7 @@ To run this code, you need to install:
 
     * **Numpy**:
         `pip3 install numpy`
- 
+
 ## Usage
 ```
 python3 process_source.py -h  #help
@@ -76,17 +77,7 @@ python3 process_source.py --preview disabled --streaming enabled --video_port [p
 ```
 
 ## Dataset
-We tested Social-Distancing code on the public ShanghaiTech'dataset. 
-
-```
-@inproceedings{zhang2016single,
-  title={Single-image crowd counting via multi-column convolutional neural network},
-  author={Zhang, Yingying and Zhou, Desen and Chen, Siqin and Gao, Shenghua and Ma, Yi},
-  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
-  pages={589--597},
-  year={2016}
-}
-```
+Coming soon!
 
 ## Disclaimer
 Information provided by the software is to be intended as an indication of safe distance compliance. It is not intended to measure the actual metric distance among people.
