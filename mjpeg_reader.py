@@ -1,5 +1,5 @@
 """
-    Social-Distancing
+    mjpeg_reader.py
 
     IIT : Istituto italiano di tecnologia
 
@@ -19,6 +19,13 @@
     or the use or other dealings in the software.
 
     LICENSE:
+    This project is licensed under the terms of the MIT license.
+	This project incorporates material from the projects listed below (collectively, "Third Party Code").  
+	This Third Party Code is licensed to you under their original license terms.  
+	We reserves all other rights not expressly granted, whether by implication, estoppel or otherwise.
+	The software can be freely used for any non-commercial applications and it is useful
+	for maintaining the safe social distance among people in pandemics. The code is open and can be 
+	improved with your support, please contact us at socialdistancig@iit.it if you will to help us.
 """
 
 from turbojpeg import TurboJPEG, TJPF_GRAY, TJSAMP_GRAY, TJFLAG_PROGRESSIVE
