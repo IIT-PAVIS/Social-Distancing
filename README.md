@@ -5,7 +5,7 @@ Social-Distancing is an open-source project for automatically estimating interpe
 
 ## What's New
 #### [November 5th, 2020]
-+ Our work have been accepted at **WACV 2021**. Chek out the [paper](http://arxiv.org/abs/2011.02018)!
++ Our work have been accepted at **WACV 2021**. Chek out the [paper](https://arxiv.org/abs/2011.02018v2)!
 #### [November 4th, 2020]
 + Alghorithm updates with better distance evaluation and computational speed up
 + Fast ellipses intersections check with Shapely
