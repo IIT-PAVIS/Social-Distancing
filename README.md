@@ -4,6 +4,8 @@ Social-Distancing is an open-source project for automatically estimating interpe
 <img src="./social-distancing.gif" alt="output"/>
 
 ## What's New
+#### [December 18th, 2020]
++ The dataset can now be downloaded from the following link: [social_distancing_dataset](https://pavisdata.iit.it/data/datasets/social_distancing/social_distancing_dataset.zip).
 #### [November 5th, 2020]
 + Our work have been accepted at **WACV 2021**. Chek out the [paper](https://arxiv.org/abs/2011.02018v2)!
 #### [November 4th, 2020]
@@ -77,7 +79,7 @@ python3 process_source.py --preview disabled --streaming enabled --video_port [p
 ```
 
 ## Dataset
-Coming soon!
+The dataset can now be downloaded from the following link: [social_distancing_dataset](https://pavisdata.iit.it/data/datasets/social_distancing/social_distancing_dataset.zip) (24.5 GB).
 
 ## Disclaimer
 Information provided by the software is to be intended as an indication of safe distance compliance. It is not intended to measure the actual metric distance among people.
